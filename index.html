@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Daily Smart Picks | Science-Backed Wellness & Longevity Guides
+    </title>
+    <meta
+      name="description"
+      content="Curated daily finds, independent product reviews, and science-backed wellness guides for adults over 40."
+    />
+    <meta
+      property="og:title"
+      content="Daily Smart Picks | Science-Backed Wellness Guides"
+    />
+    <meta
+      property="og:description"
+      content="Independent reviews and research-focused wellness guides for adults 40+."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ivory: #f7f4ee;
+        --paper: #fffdf9;
+        --ink: #1c2420;
+        --forest: #1f3d33;
+        --forest-deep: #142a23;
+        --sage: #5f7f6f;
+        --gold: #b08d57;
+        --gold-soft: #efe6d6;
+        --muted: #5b625e;
+        --line: #e4ddd0;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Manrope", -apple-system, "Segoe UI", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--sans);
+        background: var(--ivory);
+        color: var(--ink);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+      }
+      .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Header */
+      .site-header {
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+      .site-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-family: var(--serif);
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--forest);
+      }
+      .logo-mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--forest);
+        display: grid;
+        place-items: center;
+        color: var(--gold-soft);
+        font-size: 14px;
+      }
+      .header-note {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--sage);
+        font-weight: 600;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(
+          180deg,
+          var(--forest) 0%,
+          var(--forest-deep) 100%
+        );
+        color: var(--gold-soft);
+        padding: 88px 0 96px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -20% -60% -20%;
+        height: 120%;
+        background: radial-gradient(
+          closest-side,
+          rgba(176, 141, 87, 0.18),
+          transparent
+        );
+        pointer-events: none;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--gold);
+      }
+      .eyebrow::before,
+      .eyebrow::after {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--gold);
+      }
+      .hero h1 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(34px, 5.4vw, 56px);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        color: #fbf7ef;
+        max-width: 780px;
+        margin: 20px auto 18px;
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .hero p {
+        max-width: 580px;
+        margin: 0 auto;
+        font-size: 17px;
+        color: rgba(239, 230, 214, 0.82);
+      }
+      .trust {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 32px;
+        margin-top: 40px;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(239, 230, 214, 0.9);
+        position: relative;
+        z-index: 1;
+      }
+      .trust span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .trust svg {
+        width: 16px;
+        height: 16px;
+        stroke: var(--gold);
+      }
+
+      /* Section */
+      .picks {
+        padding: 80px 0 40px;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 36px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--line);
+      }
+      .section-head h2 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(26px, 3.4vw, 36px);
+        color: var(--forest);
+        letter-spacing: -0.01em;
+      }
+      .section-head p {
+        color: var(--muted);
+        font-size: 15px;
+        max-width: 380px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 48px -24px rgba(20, 42, 35, 0.28);
+        border-color: #d3c7b1;
+      }
+      .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+      }
+      .tag {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--forest);
+        background: var(--gold-soft);
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+      .num {
+        font-family: var(--serif);
+        font-size: 30px;
+        color: var(--gold);
+        line-height: 1;
+        font-style: italic;
+      }
+      .card h3 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 1.28;
+        color: var(--ink);
+        margin-bottom: 12px;
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 15px;
+        margin-bottom: 28px;
+        flex: 1;
+      }
+      .kind {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--sage);
+        margin-bottom: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+      .btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        background: var(--forest);
+        color: #fbf7ef;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 16px 22px;
+        border-radius: 12px;
+        transition: background 0.2s ease;
+      }
+      .btn span.arrow {
+        transition: transform 0.2s ease;
+      }
+      .btn:hover {
+        background: var(--forest-deep);
+      }
+      .btn:hover span.arrow {
+        transform: translateX(4px);
+      }
+      .btn:focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      /* Promise */
+      .promise {
+        margin: 48px 0 80px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      .promise h4 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 19px;
+        color: var(--forest);
+        margin-bottom: 6px;
+      }
+      .promise p {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--forest-deep);
+        color: rgba(239, 230, 214, 0.75);
+        padding: 56px 0 32px;
+        font-size: 13px;
+      }
+      .legal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgba(239, 230, 214, 0.12);
+      }
+      .legal h5 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 17px;
+        color: #fbf7ef;
+        margin-bottom: 10px;
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 24px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 760px) {
+        .grid,
+        .promise,
+        .legal {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 64px 0 72px;
+        }
+        .card,
+        .promise {
+          padding: 26px;
+        }
+        .header-note {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="./"
+          ><span class="logo-mark" aria-hidden="true">✦</span>Daily Smart
+          Picks</a
+        >
+        <span class="header-note">Wellness for Adults 40+</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Featured Wellness Directory</span>
+        <h1>
+          Thoughtful, <em>science-backed</em> guides for living well after 40
+        </h1>
+        <p>
+          Independent breakdowns, formulation insights, and honest reviews —
+          curated so you can choose with confidence.
+        </p>
+        <div class="trust" aria-label="Editorial standards">
+          <span
+            ><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+              <path d="M5 12l5 5 9-10" /></svg
+            >Research-Focused Guides</span
+          >
+          <span
+            ><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+              <path d="M5 12l5 5 9-10" /></svg
+            >Independent Editorial Reviews</span
+          >
+          <span
+            ><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+              <path d="M5 12l5 5 9-10" /></svg
+            >Updated Weekly</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="picks" aria-labelledby="picks-title">
+        <div class="section-head">
+          <h2 id="picks-title">This Week’s Curated Picks</h2>
+          <p>
+            Select a topic to read our full breakdown and official presentation
+            details.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-top">
+              <span class="tag">Muscle & Recovery</span
+              ><span class="num">01</span>
+            </div>
+            <div class="kind">In-Depth Guide</div>
+            <h3>Protein Absorption & Muscle Vitality After 40</h3>
+            <p>
+              Why traditional shakes lose efficiency with age — and how pure
+              essential amino acids (Advanced Amino Formula) support daily
+              strength and faster recovery.
+            </p>
+            <a
+              class="btn"
+              href="https://erichdev-kummer.github.io/amino-vitality-guide/"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              >Read the Absorption Guide <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="tag">Vision & Gut Wellness</span
+              ><span class="num">02</span>
+            </div>
+            <div class="kind">In-Depth Guide</div>
+            <h3>Daily Visual Clarity & The Gut-Eye Connection</h3>
+            <p>
+              Explore the 12-second daily routine and targeted nutritional
+              support behind VisiFlora for maintaining sharp, comfortable vision
+              after 40.
+            </p>
+            <a
+              class="btn"
+              href="https://erichdev-kummer.github.io/visiflora-guide/"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              >Read the Vision Guide <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="tag">Joint & Mobility</span
+              ><span class="num">03</span>
+            </div>
+            <div class="kind">Independent Review</div>
+            <h3>Ageless Shoulders Review: 10-Minute Mobility Routine</h3>
+            <p>
+              An independent review of the simple movement protocol designed to
+              ease shoulder stiffness and restore everyday upper-body comfort
+              without heavy equipment.
+            </p>
+            <a
+              class="btn"
+              href="https://erichdev-kummer.github.io/ageless-shoulders-review/"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              >Read the Ageless Shoulders Review <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="tag">Memory & Focus</span
+              ><span class="num">04</span>
+            </div>
+            <div class="kind">Independent Review</div>
+            <h3>The Brain Song Review: Audio-Based Cognitive Support</h3>
+            <p>
+              Our independent editorial review of the short daily soundwave
+              session created to support mental clarity, focus, and healthy
+              memory recall.
+            </p>
+            <a
+              class="btn"
+              href="https://erichdev-kummer.github.io/the-brain-song-review/"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              >Read The Brain Song Review <span class="arrow">→</span></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="promise" aria-label="Our editorial approach">
+        <div>
+          <h4>Research First</h4>
+          <p>
+            Every guide starts with published research and ingredient-level
+            analysis.
+          </p>
+        </div>
+        <div>
+          <h4>Honest by Design</h4>
+          <p>We explain what a product can — and can’t — reasonably do.</p>
+        </div>
+        <div>
+          <h4>Made for 40+</h4>
+          <p>Practical, clear content focused on the needs of mature adults.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="legal">
+          <div>
+            <h5>Affiliate Disclosure</h5>
+            <p>
+              In accordance with FTC guidelines, please note that Daily Smart
+              Picks is an independent editorial curation site. Some guides and
+              reviews linked on this page contain affiliate links, meaning we
+              may earn a commission if you choose to make a purchase — at no
+              additional cost to you. This never influences our editorial
+              opinions.
+            </p>
+          </div>
+          <div>
+            <h5>Health Disclaimer</h5>
+            <p>
+              The content on this site is for educational and informational
+              purposes only and does not constitute medical advice. These
+              statements have not been evaluated by the Food and Drug
+              Administration (FDA). Products mentioned are not intended to
+              diagnose, treat, cure, or prevent any disease. Always consult a
+              qualified healthcare professional before starting any supplement
+              or wellness program.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <span>© 2026 Daily Smart Picks. All rights reserved.</span>
+          <span>Individual results may vary.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
